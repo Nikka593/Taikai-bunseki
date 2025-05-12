@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>退会者分析手順書</title>
+    <style>
+        @page {
+            size: A4 portrait;
+            margin: 2cm;
+        }
+        body {
+            font-family: 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f8fbf8;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            border-left: 5px solid #4CAF50;
+        }
+        h1 {
+            color: #2E7D32;
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #A5D6A7;
+        }
+        h2 {
+            color: #388E3C;
+            font-size: 20px;
+            margin-top: 30px;
+            padding: 8px 0 8px 10px;
+            background-color: #E8F5E9;
+            border-radius: 4px;
+        }
+        .purpose-box {
+            background-color: #E8F5E9;
+            border-left: 4px solid #4CAF50;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+        }
+        .step {
+            background-color: white;
+            border: 1px solid #C8E6C9;
+            border-radius: 4px;
+            padding: 15px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+        .step-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        .step-title {
+            font-weight: bold;
+            color: #2E7D32;
+            font-size: 18px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .sub-step {
+            margin-left: 40px;
+            padding: 8px;
+            border-left: 2px solid #A5D6A7;
+        }
+        .decision {
+            margin: 5px 0 5px 40px;
+            padding: 8px 8px 8px 15px;
+            border-left: 2px dashed #A5D6A7;
+        }
+        .decision-label {
+            font-weight: bold;
+            color: #388E3C;
+        }
+        .action {
+            margin-left: 20px;
+            color: #1B5E20;
+        }
+        .flowchart {
+            width: 100%;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 12px;
+            color: #757575;
+        }
+        .leaf-decoration {
+            position: absolute;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        .leaf-top-right {
+            top: 20px;
+            right: 20px;
+            width: 100px;
+            transform: rotate(45deg);
+        }
+        .leaf-bottom-left {
+            bottom: 20px;
+            left: 20px;
+            width: 80px;
+            transform: rotate(-30deg);
+        }
+        .highlight {
+            background-color: #DCEDC8;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- リーフデコレーション -->
+        <svg class="leaf-decoration leaf-top-right" viewBox="0 0 100 100">
+            <path d="M50,0 C60,20 80,20 100,30 C80,40 60,60 50,100 C40,60 20,40 0,30 C20,20 40,20 50,0" fill="#4CAF50"></path>
+        </svg>
+        <svg class="leaf-decoration leaf-bottom-left" viewBox="0 0 100 100">
+            <path d="M50,0 C60,20 80,20 100,30 C80,40 60,60 50,100 C40,60 20,40 0,30 C20,20 40,20 50,0" fill="#4CAF50"></path>
+        </svg>
+
+        <h1>退会者分析手順書</h1>
+
+        <h2>退会分析の目的</h2>
+        <div class="purpose-box">
+            <p><strong>退会者分析を実施した背景：</strong></p>
+            <ul>
+                <li>1号店が3名体制になったこと</li>
+                <li>6か月続けたから退会するメンバーさんが多いこと</li>
+                <li>吉川さんの臨店頻度を増やしたいと相談を受けたこと</li>
+            </ul>
+            <p>上記を踏まえ、<span class="highlight">正しい現状把握と今後の対策を明確にする</span>ために実施します。</p>
+        </div>
+
+        <h2>退会者分析の手順</h2>
+
+        <div class="step">
+            <div class="step-number">0</div>
+            <div class="step-title">準備：データの取得</div>
+            <p>帳簿から退会分析したい期間のデータを印刷します。</p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-title">累計来店回数の確認</div>
+            <p>初期サポートと通常サポートのどこに要因があるかを確認するために、退会者の累計来店回数を数えます。</p>
+            
+            <div class="decision">
+                <span class="decision-label">累計来店回数が0〜5回の場合：</span>
+                <div class="action">
+                    初期サポート担当者、FA担当者を確認します。<br>
+                    2W5回のサポートができているかをチェックします。
+                </div>
+            </div>
+            
+            <div class="decision">
+                <span class="decision-label">累計来店回数が6回以降の場合：</span>
+                <div class="action">
+                    ステップ2に進みます。
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-title">未来店日数の確認</div>
+            <p>運動習慣が定着していたかを確認するために、未来店日数を確認し、短期・中期・長期に分類します。</p>
+            
+            <div class="decision">
+                <span class="decision-label">未来店の場合：</span>
+                <div class="action">
+                    未来店にならないための対策を考えます：
+                    <ul>
+                        <li>次回来店日の確認</li>
+                        <li>満足度の確認</li>
+                        <li>その他必要な対応</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="decision">
+                <span class="decision-label">未来店ではない場合：</span>
+                <div class="action">
+                    ステップ3に進みます。
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-title">退会前6か月間の来店回数確認</div>
+            <p>来店回数が少ない場合は来店数を増やすことが最優先となるため、月8回来れているかを確認します。</p>
+            
+            <div class="decision">
+                <span class="decision-label">来店回数が少ない場合：</span>
+                <div class="action">
+                    以下の対策を実施します：
+                    <ul>
+                        <li>ピンチェでの来店回数確認</li>
+                        <li>回数促進の実施</li>
+                        <li>全体告知の実施</li>
+                        <li>来店表への目標回数記入など</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="decision">
+                <span class="decision-label">来店回数が多い場合：</span>
+                <div class="action">
+                    ステップ4に進みます。
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">4</div>
+            <div class="step-title">退会理由の確認とハードル分け</div>
+            <p>6か月で退会するケースなのか、その他のハードルがあったのかを確認します。</p>
+            
+            <div class="decision">
+                <span class="decision-label">退会理由が6か月ではない場合：</span>
+                <div class="action">
+                    防げる退会の場合は、今後の対応策を具体的に考えます。
+                </div>
+            </div>
+            
+            <div class="decision">
+                <span class="decision-label">退会理由が6か月退会の場合：</span>
+                <div class="action">
+                    ピンチェでの啓蒙活動をさらに強化します。
+                </div>
+            </div>
+        </div>
+
+        <div class="flowchart">
+            <svg viewBox="0 0 600 300" width="100%">
+                <rect x="200" y="20" width="200" height="40" rx="5" fill="#E8F5E9" stroke="#4CAF50" />
+                <text x="300" y="45" text-anchor="middle" font-size="14">累計来店回数の確認</text>
+                
+                <line x1="300" y1="60" x2="300" y2="80" stroke="#4CAF50" stroke-width="2" />
+                <polygon points="300,85 295,75 305,75" fill="#4CAF50" />
+                
+                <rect x="200" y="90" width="200" height="40" rx="5" fill="#E8F5E9" stroke="#4CAF50" />
+                <text x="300" y="115" text-anchor="middle" font-size="14">未来店日数の確認</text>
+                
+                <line x1="300" y1="130" x2="300" y2="150" stroke="#4CAF50" stroke-width="2" />
+                <polygon points="300,155 295,145 305,145" fill="#4CAF50" />
+                
+                <rect x="200" y="160" width="200" height="40" rx="5" fill="#E8F5E9" stroke="#4CAF50" />
+                <text x="300" y="185" text-anchor="middle" font-size="14">退会前6か月間の来店回数確認</text>
+                
+                <line x1="300" y1="200" x2="300" y2="220" stroke="#4CAF50" stroke-width="2" />
+                <polygon points="300,225 295,215 305,215" fill="#4CAF50" />
+                
+                <rect x="200" y="230" width="200" height="40" rx="5" fill="#E8F5E9" stroke="#4CAF50" />
+                <text x="300" y="255" text-anchor="middle" font-size="14">退会理由の確認とハードル分け</text>
+            </svg>
+        </div>
+
+        <div class="footer">
+            <p>本手順書を活用して、効果的な退会防止策を講じましょう。</p>
+            <p>作成日：2025年5月12日</p>
+        </div>
+    </div>
+</body>
+</html>
